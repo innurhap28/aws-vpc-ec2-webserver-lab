@@ -1,0 +1,62 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 900 620] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1452 >>
+stream
+0.96 0.97 0.99 rg 0 0 900 620 re f
+0.10 0.22 0.36 RG 2 w 55 120 590 420 re S
+BT /F1 18 Tf 75 510 Td (AWS Web Server Lab | Seoul Region) Tj ET
+BT /F1 13 Tf 75 475 Td (VPC 10.20.0.0/16) Tj ET
+0.80 0.88 0.96 rg 90 200 470 245 re f
+0.10 0.22 0.36 RG 2 w 90 200 470 245 re S
+BT /F1 14 Tf 110 415 Td (Public Subnet 10.20.1.0/24) Tj ET
+0.95 0.78 0.45 rg 190 270 270 95 re f
+0.10 0.22 0.36 RG 2 w 190 270 270 95 re S
+BT /F1 14 Tf 215 330 Td (Security Group) Tj ET
+BT /F1 11 Tf 215 305 Td (HTTP 80: 0.0.0.0/0) Tj ET
+BT /F1 11 Tf 215 285 Td (SSH 22: learner IPv4 /32) Tj ET
+0.78 0.91 0.80 rg 250 215 150 42 re f
+0.10 0.22 0.36 RG 2 w 250 215 150 42 re S
+BT /F1 13 Tf 280 230 Td (EC2 + Nginx) Tj ET
+0.75 0.85 0.98 rg 700 390 145 65 re f
+0.10 0.22 0.36 RG 2 w 700 390 145 65 re S
+BT /F1 13 Tf 722 425 Td (Internet) Tj ET
+0.75 0.85 0.98 rg 700 275 145 65 re f
+0.10 0.22 0.36 RG 2 w 700 275 145 65 re S
+BT /F1 13 Tf 716 310 Td (Internet GW) Tj ET
+0.10 0.22 0.36 RG 2 w 770 390 m 770 340 l S
+0 0 0 rg 764 346 m 770 336 l 776 346 l f
+0.10 0.22 0.36 RG 2 w 700 307 m 650 307 l 650 340 l 645 340 l S
+0 0 0 rg 650 334 m 645 344 l 640 334 l f
+BT /F1 11 Tf 680 365 Td (HTTP request) Tj ET
+0.10 0.22 0.36 RG 2 w 325 270 m 325 257 l S
+0 0 0 rg 319 260 m 325 250 l 331 260 l f
+BT /F1 10 Tf 70 90 Td (Response returns via EC2 public IPv4, subnet route 0.0.0.0/0 -> IGW.) Tj ET
+BT /F1 10 Tf 70 70 Td (Outbound internet: EC2 -> route table -> Internet Gateway -> Internet.) Tj ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000247 00000 n 
+0000000317 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1821
+%%EOF
