@@ -33,6 +33,7 @@ AWS CLI 자격 증명은 저장소에 기록하지 마세요. AWS IAM 사용자�
 ## 명령 스크립트
 
 - `scripts/install-aws-cli.sh`: macOS용 AWS CLI v2 설치와 zsh PATH 등록
+- `scripts/uninstall-aws-cli.sh`: 사용자 영역 AWS CLI 제거 (확인 입력 필요, `~/.aws` 보존)
 - `scripts/verify-aws-profile.sh [프로필명]`: AWS 프로필 신원 확인 (기본값 `vpc-lab`)
 
 실행 예시: `bash scripts/install-aws-cli.sh` 후 새 터미널을 열거나 현재 터미널에서 `source ~/.zshrc`를 실행하고 `aws --version`을 확인합니다.
