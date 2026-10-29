@@ -4,7 +4,7 @@
 
 ## 진행 상태
 
-- AWS CLI v2.39.1을 macOS Intel 사용자 영역에 설치했습니다. 이 실행 세션에서는 `/private/tmp/aws-data/aws-cli/aws`로 실행합니다.
+- AWS CLI 설치 및 PATH 등록은 [`scripts/install-aws-cli.sh`](scripts/install-aws-cli.sh)로 수행합니다. 기본 경로는 `~/.local/bin/aws`이며 sudo와 Homebrew가 필요하지 않습니다.
 - AWS 자격 증명이 아직 설정되지 않아 계정 확인, 리소스 생성, 외부 접속 검증은 보류 중입니다.
 - 아래의 접속 검증 결과는 실제 배포 후 URL과 응답으로 갱신합니다. 현재는 검증하지 않았습니다.
 
@@ -28,5 +28,12 @@
 
 ## CLI 자격 증명 설정
 
-AWS CLI 자격 증명은 저장소에 기록하지 마세요. AWS IAM 사용자의 액세스 키가 준비되면 터미널에서 `aws configure --profile vpc-lab`를 실행해 입력하고, MFA가 필요한 환경에서는 해당 계정의 승인된 세션 자격 증명을 사용하세요. MFA 일회용 코드를 액세스 키/시크릿 키와 혼동하지 마세요. 설정 완료 뒤 `aws sts get-caller-identity --profile vpc-lab`로 계정을 확인합니다. 이 명령의 계정이 본인 계정인지 확인한 다음에만 배포를 진행합니다.
+AWS CLI 자격 증명은 저장소에 기록하지 마세요. AWS IAM 사용자의 액세스 키가 준비되면 터미널에서 `aws configure --profile vpc-lab`를 실행해 입력하고, MFA가 필요한 환경에서는 해당 계정의 승인된 세션 자격 증명을 사용하세요. MFA 일회용 코드를 액세스 키/시크릿 키와 혼동하지 마세요. [`scripts/verify-aws-profile.sh`](scripts/verify-aws-profile.sh)는 자격 증명 값을 노출하지 않고 설정된 신원을 확인합니다. 출력된 계정이 본인 계정인지 확인한 다음에만 배포를 진행합니다.
+
+## 명령 스크립트
+
+- `scripts/install-aws-cli.sh`: macOS용 AWS CLI v2 설치와 zsh PATH 등록
+- `scripts/verify-aws-profile.sh [프로필명]`: AWS 프로필 신원 확인 (기본값 `vpc-lab`)
+
+실행 예시: `bash scripts/install-aws-cli.sh` 후 새 터미널을 열거나 현재 터미널에서 `source ~/.zshrc`를 실행하고 `aws --version`을 확인합니다.
 
