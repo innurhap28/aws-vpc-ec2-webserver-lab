@@ -5,7 +5,8 @@
 ## 진행 상태
 
 - AWS CLI 설치 및 PATH 등록은 [`scripts/install-aws-cli.sh`](scripts/install-aws-cli.sh)로 수행합니다. 기본 경로는 `~/.local/bin/aws`이며 sudo와 Homebrew가 필요하지 않습니다.
-- AWS 자격 증명이 아직 설정되지 않아 계정 확인, 리소스 생성, 외부 접속 검증은 보류 중입니다.
+- `vpc-lab` 프로필의 STS 신원 확인은 성공했습니다. 현재 IAM 주체는 EC2/VPC 조회 권한이 없고, 서울 리전은 조직 SCP에서 명시적으로 차단되어 있어 리소스 목록을 아직 읽지 못했습니다.
+- 이 저장소에서 AWS 리소스를 생성하거나 외부 접속을 검증하지 않았습니다.
 - 아래의 접속 검증 결과는 실제 배포 후 URL과 응답으로 갱신합니다. 현재는 검증하지 않았습니다.
 
 ## 외부 접속 검증
@@ -35,6 +36,7 @@ AWS CLI 자격 증명은 저장소에 기록하지 마세요. AWS IAM 사용자�
 - `scripts/install-aws-cli.sh`: macOS용 AWS CLI v2 설치와 zsh PATH 등록
 - `scripts/uninstall-aws-cli.sh`: 사용자 영역 AWS CLI 제거 (확인 입력 필요, `~/.aws` 보존)
 - `scripts/verify-aws-profile.sh [프로필명]`: AWS 프로필 신원 확인 (기본값 `vpc-lab`)
+- `scripts/inspect-lab.sh [프로필명]`: 서울·시드니 리소스 목록과 과금 위험 리소스 읽기 전용 조회
 
 실행 예시: `bash scripts/install-aws-cli.sh` 후 새 터미널을 열거나 현재 터미널에서 `source ~/.zshrc`를 실행하고 `aws --version`을 확인합니다.
 
