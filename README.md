@@ -18,14 +18,14 @@
 
 ## 구성 및 보안
 
-아키텍처는 [docs/architecture.pdf](docs/architecture.pdf)를 참고하세요. SSH(22)는 현재 접속지의 공인 IPv4 `/32`만 허용하고 HTTP(80)는 전체 공개합니다. 인바운드 전체 포트 허용 규칙은 사용하지 않습니다. IAM 권한은 `AdministratorAccess`를 사용하지 않고 EC2/VPC 실습 범위로 한정합니다.
+아키텍처 Mermaid 다이어그램과 캡처 근거는 [docs/architecture.md](docs/architecture.md)를 참고하세요. 캡처 기준 SSH(22)는 `121.135.181.56/32`만 허용하고 HTTP(80)는 전체 공개합니다. 인바운드 전체 포트 허용 규칙은 사용하지 않습니다.
 
 ## 산출물
 
-- [아키텍처 다이어그램](docs/architecture.pdf)
+- [아키텍처 다이어그램 (Mermaid)](docs/architecture.md)
 - [트러블슈팅 보고서](docs/troubleshooting.md)
 - [리소스 정리 체크리스트](docs/cleanup-checklist.md)
-- 외부 접속 캡처: `screenshots/external-health.png` (미작성)
+- [외부 접속 캡처](screenshots/Nginx_healthcheck.png)
 
 ## CLI 자격 증명 설정
 
