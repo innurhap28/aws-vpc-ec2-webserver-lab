@@ -11,10 +11,7 @@
 
 ## 외부 접속 검증
 
-- 방식: B — `GET http://<퍼블릭 IP>/health`
-- URL: 배포 후 기입
-- 기대 응답: HTTP 200, 본문 `OK`
-- 증빙: `screenshots/external-health.png` (배포 후 브라우저 또는 터미널 결과를 캡처)
+- 증빙: [`screenshots/Nginx_healthcheck.png`](screenshots/Nginx_healthcheck.png)
 
 ## 구성 및 보안
 
@@ -26,10 +23,6 @@
 - [트러블슈팅 보고서](docs/troubleshooting.md)
 - [리소스 정리 체크리스트](docs/cleanup-checklist.md)
 - [외부 접속 캡처](screenshots/Nginx_healthcheck.png)
-
-## CLI 자격 증명 설정
-
-AWS CLI 자격 증명은 저장소에 기록하지 마세요. AWS IAM 사용자의 액세스 키가 준비되면 터미널에서 `aws configure --profile vpc-lab`를 실행해 입력하고, MFA가 필요한 환경에서는 해당 계정의 승인된 세션 자격 증명을 사용하세요. MFA 일회용 코드를 액세스 키/시크릿 키와 혼동하지 마세요. [`scripts/verify-aws-profile.sh`](scripts/verify-aws-profile.sh)는 자격 증명 값을 노출하지 않고 설정된 신원을 확인합니다. 출력된 계정이 본인 계정인지 확인한 다음에만 배포를 진행합니다.
 
 ## 명령 스크립트
 
